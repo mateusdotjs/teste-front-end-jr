@@ -1,0 +1,27 @@
+.title-container {
+    padding: 0 65px;
+    margin-bottom: 4px;
+}
+
+.title {
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ text-wrap: nowrap;
+}
+
+.title-detailed::before {
+    content: '';
+    width: 100%;
+    height: 1px;
+    margin-right: 34px;
+    background-color: #000;
+}
+
+.title-detailed::after {
+    content: '';
+    width: 100%;
+    height: 1px;
+    margin-left: 34px;
+    background-color: #000;
+}
