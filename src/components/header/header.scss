@@ -1,67 +1,67 @@
 .header-benefits {
-    display: flex;
-    justify-content: center;
-    gap: 120px;
-    padding: 6px 0;
+  display: flex;
+  justify-content: center;
+  gap: 120px;
+  padding: 6px 0;
 
-    li {
-        display: flex;
-        align-items: center;
-        gap: 10px;
-    }
+  li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
 }
 
 .header-main {
-    display: flex;
-    align-items: center;
-    padding: 12px 55px;
-    border-top: 1px solid #F0F0F0;
-    border-bottom: 1px solid #F0F0F0;
+  display: flex;
+  align-items: center;
+  padding: 12px 55px;
+  border-top: 1px solid #f0f0f0;
+  border-bottom: 1px solid #f0f0f0;
 
-    > svg {
-        margin-right: 95px;
-    }
+  > svg {
+    margin-right: 95px;
+  }
 }
 
 .header-search {
-    display: flex;
-    flex: 1;
-    align-items: center;
-    justify-content: space-between;
-    background-color: #F6F5F2;
-    border-radius: 10px;
-    padding: 10px 10px 10px 24px;
-    margin-right: 60px;
+  display: flex;
+  flex: 1;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #f6f5f2;
+  border-radius: 10px;
+  padding: 10px 10px 10px 24px;
+  margin-right: 60px;
 
-    input {
-        flex: 1;
-        border: none;
-        background-color: #F6F5F2;
-        outline: none;
-    }
+  input {
+    flex: 1;
+    border: none;
+    background-color: #f6f5f2;
+    outline: none;
+  }
 }
 
 .header-menu-icons {
-    display: flex;
-    align-items: center;
-    gap: 32px;
+  display: flex;
+  align-items: center;
+  gap: 32px;
 }
 
 .header-navbar {
+  display: flex;
+  justify-content: center;
+  box-shadow: 0px 8px 16px 0px rgb(57, 48, 19, 12%);
+  text-transform: uppercase;
+
+  ul {
     display: flex;
-    justify-content: center;
-    box-shadow: 0px 8px 16px 0px rgb(57, 48, 19, 12%);
-    text-transform: uppercase;
+    gap: 90px;
+    padding: 10px 0;
+  }
 
-    ul {
-        display: flex;
-        gap: 90px;
-        padding: 10px 0;
-    }
-
-    li {
-        display: flex;
-        align-items: center;
-        gap: 12px;
-    }
+  li {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
 }

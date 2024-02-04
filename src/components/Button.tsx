@@ -1,9 +1,7 @@
-import { ComponentProps } from "react"
+import { ComponentProps } from "react";
 
-const Button = ({children}: ComponentProps<'button'>) => {
-  return (
-    <button>{children}</button>
-  )
-}
+const Button = ({ children }: ComponentProps<"button">) => {
+  return <button>{children}</button>;
+};
 
-export default Button
+export default Button;

@@ -1,22 +1,22 @@
 .banner-bg {
-    background-image: url('../../assets/img/banner.png');
-    background-size: cover;
-    background-repeat: no-repeat;
-    color: #fff;
-    
-    > div {
-        background-image: linear-gradient(to bottom, #00000000, #000000);
-        padding: 55px 0;
+  background-image: url("../../assets/img/banner.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: #fff;
 
-        h2 {
-            margin-bottom: 30px;
-        }
+  > div {
+    background-image: linear-gradient(to bottom, #00000000, #000000);
+    padding: 55px 0;
+
+    h2 {
+      margin-bottom: 30px;
     }
-    
-    button {
-        border: none;
-        border-radius: 5px;
-        background: #F71963;
-        padding: 16px 60px;
-    }
+  }
+
+  button {
+    border: none;
+    border-radius: 5px;
+    background: #f71963;
+    padding: 16px 60px;
+  }
 }

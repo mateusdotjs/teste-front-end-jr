@@ -1,40 +1,43 @@
 .product {
-    padding: 32px 12px 16px 12px;
-    box-shadow: 0px 3px 19px 0px rgba(0, 0, 0, 0.22);
-    border-radius: 10px;
+  padding: 32px 12px 16px 12px;
+  box-shadow: 0px 3px 19px 0px rgba(0, 0, 0, 0.22);
+  border-radius: 10px;
+  cursor: pointer;
 
-    img {
-        margin-bottom: 20px;
-    }
+  img {
+    margin-bottom: 20px;
+  }
 }
 
 .product-name {
-    margin-bottom: 12px;
-    text-transform: uppercase;
+  margin-bottom: 12px;
+  text-transform: uppercase;
 }
 
 .product-deal {
-   text-decoration: line-through;
+  text-decoration: line-through;
 }
 
 .product-price {
-    margin-bottom: 2px;
+  margin-bottom: 2px;
 }
 
 .product-payment {
-    margin-bottom: 5px;
+  margin-bottom: 5px;
 }
 
 .product-freight {
-    margin-bottom: 12px;
+  margin-bottom: 12px;
 }
 
 .product-button {
-    width: 100%;
-    color: white;
-    background-color: #F71963;
-    border: none;
-    border-radius: 4px;
-    text-transform: uppercase;
-    padding: 15px 86px;
+  width: 100%;
+  color: white;
+  background-color: #f71963;
+  border: none;
+  border-radius: 4px;
+  text-transform: uppercase;
+  padding: 15px 86px;
+  cursor: pointer;
 }
+
