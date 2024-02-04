@@ -1,25 +1,23 @@
 import "./products.scss";
 import Title from "../global/Title";
-import { useEffect, useRef, useState } from "react";
+import { useRef, useState } from "react";
 import ProductCard from "./ProductCard";
 import LinkCard from "../global/LinkCard";
 import Modal from "./Modal";
 import Carousel from "../carousel/Carousel";
 import NextArrow from "../carousel/NextArrow";
 import PrevArrow from "../carousel/PrevArrow";
-
-export type ProductType = {
-  productName: string;
-  descriptionShort: string;
-  photo: string;
-  price: number;
-};
+import useFetch from "../../hooks/useFetch";
+import { ProductType, APIResponse } from "../../types";
 
 const Products = () => {
-  const [products, setProducts] = useState<ProductType[] | null>(null);
   const [isModalOpen, setIsModalOpen] = useState<boolean>(false);
   const [modalData, setModalData] = useState<ProductType | null>(null);
   const carouselRef = useRef<HTMLUListElement>(null);
+
+  const { data, loading } = useFetch<APIResponse>(
+    "/api/teste-front-end/junior/tecnologia/lista-produtos/produtos.json"
+  );
 
   const handleNextClick = () => {
     if (carouselRef.current) {
@@ -33,27 +31,6 @@ const Products = () => {
     }
   };
 
-  useEffect(() => {
-    const getProducts = async () => {
-      const url =
-        "/api/teste-front-end/junior/tecnologia/lista-produtos/produtos.json";
-      try {
-        const response = await fetch(url);
-        const data = await response.json();
-        if (!data.success) {
-          throw new Error("Erro ao recuperar dados de produtos.");
-        }
-        setProducts(data.products);
-      } catch (error) {
-        alert(error);
-        console.log(error);
-        setProducts(null);
-      }
-    };
-
-    getProducts();
-  }, []);
-
   return (
     <section className="container">
       <Title title="Produtos relacionados" decoration={true} />
@@ -65,30 +42,29 @@ const Products = () => {
         <li>TVs</li>
         <li>Ver todos</li>
       </ul>
-      <div>
-        <div className="products-container">
-          <NextArrow onClick={handleNextClick} />
-          <PrevArrow onClick={handlePrevClick} />
 
-          <ul className="products-slider" ref={carouselRef}>
-            {products &&
-              products.map((product, i) => {
-                return (
-                  <li key={i}>
-                    <ProductCard
-                      productName={product.productName}
-                      descriptionShort={product.descriptionShort}
-                      photo={product.photo}
-                      price={product.price}
-                      setIsModalOpen={setIsModalOpen}
-                      setModalData={setModalData}
-                    />
-                  </li>
-                );
-              })}
-          </ul>
-        </div>
+      <div className="products-container">
+        <NextArrow onClick={handleNextClick} />
+        <PrevArrow onClick={handlePrevClick} />
+        <ul className="products-slider" ref={carouselRef}>
+          {data &&
+            data.products.map((product, i) => {
+              return (
+                <li key={i}>
+                  <ProductCard
+                    productName={product.productName}
+                    descriptionShort={product.descriptionShort}
+                    photo={product.photo}
+                    price={product.price}
+                    setIsModalOpen={setIsModalOpen}
+                    setModalData={setModalData}
+                  />
+                </li>
+              );
+            })}
+        </ul>
       </div>
+
       <div className="products-partners">
         <LinkCard />
         <LinkCard />
