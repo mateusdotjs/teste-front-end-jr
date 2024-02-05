@@ -1,3 +1,5 @@
+@use "../../style/variables";
+
 .title-container {
   padding: 0 65px;
   margin-bottom: 4px;
@@ -8,6 +10,9 @@
   align-items: center;
   justify-content: center;
   text-wrap: nowrap;
+  color: variables.$main-color;
+  font-weight: variables.$bold;
+  font-size: 30px;
 }
 
 .title-detailed::before {

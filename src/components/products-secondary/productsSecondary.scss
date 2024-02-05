@@ -1,5 +1,9 @@
+@use "../../style/variables";
+
 .products-sec-all {
   text-align: center;
+  font-weight: variables.$bold;
+  font-size: 15px;
 }
 
 .products-sec-partners {
