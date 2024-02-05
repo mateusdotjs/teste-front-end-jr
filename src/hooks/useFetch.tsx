@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 
 function useFetch<T>(url: RequestInfo | URL) {
   const [data, setData] = useState<T | null>(null);
+  const [error, setError] = useState<string | null>(null);
   const [loading, setLoading] = useState(false);
 
   useEffect(() => {
@@ -16,9 +17,10 @@ function useFetch<T>(url: RequestInfo | URL) {
         }
         setData(data);
       } catch (error) {
-        alert(error);
-        console.log(error);
-        setData(null);
+        if (error instanceof Error) {
+          setError(error.message);
+          setData(null);
+        }
       } finally {
         setLoading(false);
       }
@@ -26,7 +28,7 @@ function useFetch<T>(url: RequestInfo | URL) {
     fetchData();
   }, [url]);
 
-  return { data, loading };
+  return { data, loading, error };
 }
 
 export default useFetch;

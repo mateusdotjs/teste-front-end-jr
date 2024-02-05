@@ -1,6 +1,6 @@
 import { Dispatch, SetStateAction } from "react";
 import "./productCard.scss";
-import { ProductType } from "./Products";
+import { ProductType } from "../../types";
 
 type ProductCardProps = ProductType & {
   setIsModalOpen: Dispatch<SetStateAction<boolean>>;

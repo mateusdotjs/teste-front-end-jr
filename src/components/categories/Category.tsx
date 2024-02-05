@@ -7,12 +7,13 @@ type CategoryProps = {
 };
 
 const Category = ({ title, url, active }: CategoryProps) => {
+  console.log(active);
   return (
     <li className="category">
-      <div className="category-bg">
+      <div className={`category-bg ${active ? "active" : ""}`}>
         <img src={url} />
       </div>
-      <span className={`${active ? "color-main" : ""}`}>{title}</span>
+      <span className={`${active ? "active" : ""}`}>{title}</span>
     </li>
   );
 };

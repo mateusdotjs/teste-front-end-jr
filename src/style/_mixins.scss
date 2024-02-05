@@ -1,0 +1,43 @@
+@use "./variables";
+
+@mixin button {
+  border: none;
+  color: variables.$white;
+  background-color: variables.$main-color;
+}
+
+@mixin fade-bg {
+  background-image: linear-gradient(to bottom, #00000000, #000000);
+}
+
+@mixin link-card-section($border-top) {
+  padding: $border-top 350px 40px 40px;
+}
+
+@mixin footer-list {
+  color: variables.$white;
+
+  p:first-child {
+    color: variables.$white;
+    font-weight: bold;
+    font-size: 13px;
+    margin-bottom: 24px;
+    text-wrap: nowrap;
+  }
+
+  a {
+    text-decoration: none;
+    color: variables.$white;
+  }
+}
+
+@mixin footer-list-text {
+  ul {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    text-wrap: nowrap;
+    font-size: 12px;
+    font-weight: variables.$light;
+  }
+}
