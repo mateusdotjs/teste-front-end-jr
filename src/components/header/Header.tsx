@@ -17,21 +17,21 @@ const Header = () => {
       <ul className="header-benefits">
         <li>
           <Shield />
-          <span className="font-12 medium">
-            Compra <span className="color-main semibold">100% segura</span>
+          <span>
+            Compra <span className="header-highlight">100% segura</span>
           </span>
         </li>
         <li>
           <Truck />
-          <span className="font-12 medium">
-            <span className="color-main semibold">Frete grátis</span> acima de
-            R$ 200
+          <span>
+            <span className="header-highlight">Frete grátis</span> acima de R$
+            200
           </span>
         </li>
         <li>
           <CreditCard />
-          <span className="font-12 medium">
-            <span className="color-main semibold">Parcele</span> suas compras
+          <span>
+            <span className="header-highlight">Parcele</span> suas compras
           </span>
         </li>
       </ul>
@@ -49,13 +49,13 @@ const Header = () => {
         </div>
       </div>
       <nav className="header-navbar">
-        <ul className="font-12 semibold">
+        <ul>
           <li>Todas Categorias</li>
           <li>Supermercado</li>
           <li>Livros</li>
           <li>Moda</li>
           <li>Lançamentos</li>
-          <li className="color-main">Ofertas do dia</li>
+          <li>Ofertas do dia</li>
           <li>
             <Crown />
             Assinatura

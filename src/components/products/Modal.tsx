@@ -61,6 +61,9 @@ const Modal = ({ modalData, setIsModalOpen }: ModalProps) => {
               <Plus />
             </button>
           </div>
+          <button className="modal-button">
+            COMPRAR
+          </button>
         </div>
       </div>
     </div>

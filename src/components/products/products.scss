@@ -1,7 +1,9 @@
+@use "../../style/variables";
+
 .products-categories {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
-  border: 1px solid grey;
+  border: 1px solid variables.$category-border;
   justify-items: center;
   text-transform: uppercase;
 
@@ -10,7 +12,13 @@
     width: 100%;
     padding: 12px 0;
     text-align: center;
-    border-right: 1px solid grey;
+    border-right: 1px solid variables.$category-border;
+    font-weight: variables.$regular;
+
+    &:first-child {
+      color: variables.$main-color;
+      font-weight: variables.$bold;
+    }
 
     &:last-child {
       border: none;
@@ -22,12 +30,6 @@
   display: flex;
   align-items: center;
   position: relative;
-}
-
-.products-test {
-  max-width: 1280px;
-  overflow: clip;
-  overflow-clip-margin: 20px;
 }
 
 .products-slider {

@@ -1,14 +1,18 @@
 import "./LinkCard.scss";
 
-const LinkCard = () => {
+const LinkCard = ({ type }: {type: string}) => {
   return (
     <div className="linkCard">
-      <div className="linkCard-content">
-        <h4 className="font-40 bold">Parceiros</h4>
-        <span className="font-16 regular">
+      <div
+        className={`linkCard-content linkCard-${type}`}
+      >
+        <h4 className="linkCard-title">
+          {type === 'partners' ? 'Parceiros' : 'Produtos'}
+        </h4>
+        <span className="linkCard-description">
           Lorem ipsum dolor sit amet, consectetur
         </span>
-        <button className="black font-16">confira</button>
+        <button>confira</button>
       </div>
     </div>
   );

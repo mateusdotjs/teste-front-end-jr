@@ -33,18 +33,16 @@ const ProductCard = ({
   };
 
   return (
-    <div className="product slick-slide" onClick={handleClick}>
+    <div className="product" onClick={handleClick}>
       <img src={photo} />
-      <h4 className="product-name light font-15">{productName}</h4>
-      <p className="product-deal regular font-16">
-        {formatCurrency(price + 999.99)}
-      </p>
-      <p className="product-price bold font-20">{formatCurrency(price)}</p>
-      <p className="product-payment regular font-12">
+      <h4 className="product-name">{productName}</h4>
+      <p className="product-deal">{formatCurrency(price + 999.99)}</p>
+      <p className="product-price">{formatCurrency(price)}</p>
+      <p className="product-payment">
         ou 2x de R$ {formatCurrency(price / 2)} sem juros
       </p>
-      <p className="product-freight regular font-12 color-main">Frete grátis</p>
-      <button className="product-button font-14 bold">Comprar</button>
+      <p className="product-freight">Frete grátis</p>
+      <button className="product-button">Comprar</button>
     </div>
   );
 };

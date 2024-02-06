@@ -1,3 +1,5 @@
+@use '../../style/variables';
+
 .header-benefits {
   display: flex;
   justify-content: center;
@@ -8,15 +10,23 @@
     display: flex;
     align-items: center;
     gap: 10px;
+    font-size: 12px;
+    font-weight: variables.$medium;
+    color: variables.$font-gray-1;
   }
+}
+
+.header-highlight {
+  font-weight: variables.$semibold;
+  color: variables.$main-color;
 }
 
 .header-main {
   display: flex;
   align-items: center;
   padding: 12px 55px;
-  border-top: 1px solid #f0f0f0;
-  border-bottom: 1px solid #f0f0f0;
+  border-top: 1px solid variables.$border-header;
+  border-bottom: 1px solid variables.$border-header;
 
   > svg {
     margin-right: 95px;
@@ -28,7 +38,7 @@
   flex: 1;
   align-items: center;
   justify-content: space-between;
-  background-color: #f6f5f2;
+  background-color: variables.$input-bg;
   border-radius: 10px;
   padding: 10px 10px 10px 24px;
   margin-right: 60px;
@@ -36,8 +46,10 @@
   input {
     flex: 1;
     border: none;
-    background-color: #f6f5f2;
+    background-color: transparent;
     outline: none;
+    font-size: 14px;
+    font-weight: variables.$medium;
   }
 }
 
@@ -63,5 +75,12 @@
     display: flex;
     align-items: center;
     gap: 12px;
+    font-size: 12px;
+    font-weight: variables.$semibold;
+    color: variables.$font-gray-1;
+
+    &:nth-child(6)  {
+      color: variables.$main-color;
+    }
   }
 }

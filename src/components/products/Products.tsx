@@ -19,7 +19,7 @@ const Products = () => {
     <section className="container">
       <Title title="Produtos relacionados" decoration={true} />
       <ul className="products-categories">
-        <li>celular</li>
+        <li className="active">celular</li>
         <li>acessórios</li>
         <li>tablets</li>
         <li>notebooks</li>
@@ -38,8 +38,8 @@ const Products = () => {
       {error && "Erro ao recuperar produtos."}
 
       <div className="products-partners">
-        <LinkCard />
-        <LinkCard />
+        <LinkCard type="partners" />
+        <LinkCard type="partners" />
       </div>
       {isModalOpen && modalData && (
         <Modal modalData={modalData} setIsModalOpen={setIsModalOpen} />

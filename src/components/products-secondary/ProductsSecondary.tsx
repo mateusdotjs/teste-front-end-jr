@@ -8,8 +8,8 @@ const ProductsSecondary = () => {
       <Title title="Produtos relacionados" decoration={true} />
       <p className="products-sec-all">Ver todos</p>
       <div className="products-sec-partners">
-        <LinkCard />
-        <LinkCard />
+        <LinkCard type="products" />
+        <LinkCard type="products" />
       </div>
     </section>
   );
