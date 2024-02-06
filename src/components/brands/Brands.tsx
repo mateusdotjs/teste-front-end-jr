@@ -1,5 +1,6 @@
 import Title from "../global/Title";
 import Brand from "./Brand";
+import Arrow from "../../assets/icons/brands/arrow.svg?react";
 
 const Brands = () => {
   return (
@@ -30,6 +31,9 @@ const Brands = () => {
         <li>
           <Brand />
         </li>
+        <div className="brands-arrow">
+          <Arrow />
+        </div>
       </ul>
     </section>
   );

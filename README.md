@@ -1,30 +1,49 @@
-# React + TypeScript + Vite
+# README
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Este documento fornece instruções sobre como clonar, instalar dependências e executar localmente o projeto.
 
-Currently, two official plugins are available:
+## Clonar o Projeto
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+1. Abra o terminal ou prompt de comando no seu computador.
 
-## Expanding the ESLint configuration
+2. Navegue até o diretório desejado:
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+    ```bash
+    cd caminho/do/seu/diretorio
+    ```
 
-- Configure the top-level `parserOptions` property like this:
+3. Clone o repositório:
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
+    ```bash
+    git clone https://github.com/seu-usuario/seu-projeto.git
+    ```
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+## Instalar Dependências
+
+Certifique-se de ter as seguintes ferramentas instaladas:
+
+- [Node.js](https://nodejs.org/) (inclui npm)
+
+1. Navegue até o diretório do projeto:
+
+    ```bash
+    cd seu-projeto
+    ```
+
+2. Instale as dependências:
+
+    ```bash
+    npm install
+    ```
+
+## Executar Localmente
+
+1. Inicie o servidor ou aplicação:
+
+    ```bash
+    npm start
+    ```
+
+2. Abra um navegador e acesse [http://localhost:3000](http://localhost:3000) (ou a porta especificada no seu projeto) para visualizar o resultado.
+
+Certifique-se de consultar a documentação do projeto para informações adicionais e configurações específicas, se necessário.
