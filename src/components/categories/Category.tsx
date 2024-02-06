@@ -10,10 +10,10 @@ const Category = ({ title, url, active }: CategoryProps) => {
   console.log(active);
   return (
     <li className="category">
-      <div className={`category-bg ${active ? "active" : ""}`}>
+      <div className={`category-bg ${active ? "category-active" : ""}`}>
         <img src={url} />
       </div>
-      <span className={`${active ? "active" : ""}`}>{title}</span>
+      <span className={`${active ? "category-active" : ""}`}>{title}</span>
     </li>
   );
 };

@@ -14,6 +14,7 @@
     text-align: center;
     border-right: 1px solid variables.$category-border;
     font-weight: variables.$regular;
+    color: variables.$font-gray-5;
 
     &:first-child {
       color: variables.$main-color;
